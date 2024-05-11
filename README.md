@@ -1,4 +1,4 @@
-# Ceneco Advisory Checker
+# AWS SNS - SMS
 
 Github action that sends sms via AWS SNS
 
