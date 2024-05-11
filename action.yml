@@ -1,0 +1,24 @@
+name: AWS SNS - SMS
+description: Action that sends sms via AWS SNS
+inputs:
+  accessKeyId:
+    description: "AWS Access Key ID"
+    required: true
+  secretAccessKey:
+    description: "AWS Secret Access Key"
+    required: true
+  region:
+    description: "AWS Region"
+    required: true
+  phoneNumber:
+    description: "Phone number to send sms to"
+    required: true
+  message:
+    description: "Message to send"
+    required: true
+outputs:
+  messageId:
+    description: "The AWS SNS Message ID"
+runs:
+  using: node20
+  main: ./src/index.js

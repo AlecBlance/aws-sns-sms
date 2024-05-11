@@ -1,0 +1,18 @@
+{
+  "name": "aws-sns-sms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "aws-sdk": "^2.1618.0",
+    "dotenv": "^16.4.5"
+  }
+}

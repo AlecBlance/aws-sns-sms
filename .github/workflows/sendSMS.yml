@@ -1,0 +1,24 @@
+name: Send SMS
+
+on: workflow_dispatch
+
+jobs:
+  sendSMS:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Send SMS
+        uses: ./
+        with:
+          accessKeyId: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secretAccessKey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          region: ${{ secrets.AWS_REGION }}
+          phoneNumber: ${{ secrets.PHONE_NUMBER }}
+          message: "Hello from GitHub Actions"
